@@ -1,0 +1,43 @@
+<div class="frmbody">
+
+  <div class="drow">
+	<div class="error pdDiv1"> </div>
+	<div class="pdDiv2">Principal</div>
+	<div class="pdDiv3">
+	   <input type="text" name="principal" size="20">
+	</div>
+  </div>
+
+  <div class="drow">
+	<div class="error pdDiv1"> </div>
+	<div class="pdDiv2">Rate of Interest</div>
+	<div class="pdDiv3">
+	   <input type="text" name="interest" size="20">
+	</div>
+  </div>
+
+  <div class="drow">
+	<div class="error pdDiv1"> </div>
+	<div class="pdDiv2">Repayment - No of Months</div>
+	<div class="pdDiv3">
+	   <input type="text" name="instalment" size="20">
+	</div>
+  </div>
+
+  <div class="drow">
+	<div class="error pdDiv1"> </div>
+	<div class="pdDiv2"> </div>
+	<div class="pdDiv3">
+	   <input type="button" onclick="isNumber();" value="Calculate" name="B1">
+	</div>
+  </div>
+
+  <div class="drow">
+	<div class="error pdDiv1"> </div>
+	<div class="pdDiv2">Equated Monthly Installments</div>
+	<div class="pdDiv3">
+	   <input type="text" readonly="" name="total" size="20">
+	</div>
+  </div>
+
+</div>

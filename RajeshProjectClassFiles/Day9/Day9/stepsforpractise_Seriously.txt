@@ -1,0 +1,20 @@
+Steps
+
+1. Linear script to laucnh app, enter data,extract emi and perform validation(done using @test)
+
+2. generalize launch and close of app(@beforemethod and aftermethod)
+	a. in the before method ,generalize to use the url from properties file.
+
+3.Add Logs to your script
+
+5. Generalize report using @beforeSuite and @Aftermethod
+
+6. Add screenshot to report
+
+7. Shift the Webelement to Pagefactory
+
+8. Generalize the generic businesslogics(eg: enter amt,rate,tenure and click) into the pagefactory
+
+9. Create keywords for common actions on WebElement
+
+10. Create generic function for all validations.

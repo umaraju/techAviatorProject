@@ -1,0 +1,10 @@
+
+
+short     Short
+byte      Byte
+int	 Integer
+long	Long
+double   Double
+float Float
+char  Char
+boolean  Boolean

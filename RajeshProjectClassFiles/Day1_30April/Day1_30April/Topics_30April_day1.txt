@@ -1,0 +1,22 @@
+
+Topics:
+
+1. Html Tags 
+2. Locator
+3. Basic Selenium code
+
+4. Xpath
+a. building absolute xpath
+b. building relative xpath
+c. Building your own customised xpath
+d. building xpath based on multiple attributes
+e. Forward traversing
+f. Backward traversing
+
+5. Css Selector
+a. building absolute CSS
+b. building relative CSS
+c. Building your own customised CSS
+d. building CSS based on multiple attributes
+e. Forward traversing
+

@@ -1,0 +1,7 @@
+Topics: 14-May
+
+1.Collections
+2.handle multiple browsers
+3.Constructor
+4. Static variables and methods
+5. Exce Read and Write

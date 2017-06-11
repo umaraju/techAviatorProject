@@ -1,0 +1,41 @@
+<div id="emiresults" style="width:330px; height:170px;overflow:scroll; ">
+	<table class="tabstyle" width="400" cellspacing="5" cellpadding="3" border="0" align="left" valign="top">
+		<tbody>
+			<tr>//div[@id='emiresults']/table/tbody/tr[1]/td[1]
+				<td class="tabstylehead">Months</td>
+				<td class="tabstylehead">EMI</td>
+				<td class="tabstylehead">Total Payment</td>
+				<td class="tabstylehead">Total Int.</td>
+			</tr>
+			
+			<tr>//div[@id='emiresults']/table/tbody/tr[2]/td[1]
+				<td>12</td>
+				<td>879.16</td>
+				<td>10549.92</td>
+				<td>549.92</td>
+			</tr>
+			
+			<tr>//div[@id='emiresults']/table/tbody/tr[3]/td[1]
+				<td>24</td>
+				<td>461.45</td>
+				<td>11074.8</td>
+				<td>1074.8</td>
+			</tr>
+			
+			<tr>
+				<td>36</td>
+				<td>322.67</td>
+				<td>11616.12</td>
+				<td>1616.12</td>
+			</tr>
+//div[@id='emiresults']/table/tbody//td[text()='" + monthinit + "']/../td[2]
+			<tr>
+				<td>48</td>
+				<td>253.63</td>
+				<td>12174.24</td>
+				<td>2174.24</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>

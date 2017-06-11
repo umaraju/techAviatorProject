@@ -1,0 +1,12 @@
+
+
+Locators:
+
+1. Id  - attributes
+2. Name - attributes
+3. ClassName  - attributes
+4. tagName  - name of the tag
+5. Linktext - text of Link
+6. Partial LinkText  - text of Link
+7. Xpath  - Dom Structure
+8. CSS Selector - Dom structure

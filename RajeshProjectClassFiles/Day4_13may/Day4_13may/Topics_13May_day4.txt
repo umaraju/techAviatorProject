@@ -1,0 +1,9 @@
+1. Abstractionce
+a. Interface 
+b. Abstract Class
+
+2. Polymorphism
+3. Arrays
+4. Alert
+5. Encapsulation
+6. Constructor
