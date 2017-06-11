@@ -50,7 +50,7 @@ public class RediffBaseClass {
 	@BeforeSuite
 	public void beforeSuite() {
 		
-		eReport = new ExtentReports(System.getProperty("user.dir")+"//src//test//reports_"+getDateTime()+".html");
+		eReport = new ExtentReports(System.getProperty("user.dir")+"/reports/reports_"+getDateTime()+".html");
 		
 	}
 	
@@ -80,7 +80,7 @@ public class RediffBaseClass {
 		File screenShot = sc.getScreenshotAs(OutputType.FILE);
 		
 		//3. Save Path to Variable
-		String scFilePath = System.getProperty("user.dir")+"//src//test//reports";
+		String scFilePath = System.getProperty("user.dir")+"//src//test//reports"+ ".png";
 		
 		//4. Copy file with TCID and Date
 		FileUtils.copyFile(screenShot, new File(scFilePath+getDateTime()));
@@ -132,13 +132,14 @@ public class RediffBaseClass {
 	public void containsFullImageValidation(String Actual, String Expected, String StepName) throws IOException {
 		
 		if(Actual.contains(Expected)) {
-			//log.info("Step passed "+ StepName);
+			log.info("Step passed ");
 			startTest.log(LogStatus.PASS, StepName+ "Actual result is "+Actual+ "Expected result is "+Expected);
 		}else{
 			log.info("Step failed "+ StepName);
 			startTest.log(LogStatus.FAIL, StepName+ "Actual result is "+Actual+ "Expected result is "+Expected + startTest.addScreenCapture(takeScreenShot()));
 		}	
 	}
+	
 	//Contains with web element level screen shot
 	public void containsElementLevelValidation(String Actual, String Expected, WebElement ele, String StepName) throws IOException {
 		
@@ -154,13 +155,14 @@ public class RediffBaseClass {
 	public void equalsFullImageValidation(String Actual, String Expected, String StepName) throws IOException {
 		
 		if(Actual.equals(Expected)) {
-			log.info("Step passed "+ StepName);
+			log.info("Step passed ");
 			startTest.log(LogStatus.PASS, StepName+ "Actual result is "+Actual+ "Expected result is "+Expected);
 		}else{
 			log.info("Step failed "+ StepName);
 			startTest.log(LogStatus.FAIL, StepName+ "Actual result is "+Actual+ "Expected result is "+Expected + startTest.addScreenCapture(takeScreenShot()));
 		}	
 	}
+	
 	//Equals with web element level screen shot
 		public void equalsElementLevelValidation(String Actual, String Expected, WebElement ele, String StepName) throws IOException {
 			
@@ -173,7 +175,7 @@ public class RediffBaseClass {
 			}	
 		}
 	
-/*	@AfterMethod()
+	@AfterMethod()
 	public void tearDown(ITestResult result) throws IOException {
 		
 		if(result.getStatus() == ITestResult.SUCCESS) {
@@ -183,9 +185,8 @@ public class RediffBaseClass {
 		}else if(result.getStatus() == ITestResult.FAILURE){
 			
 			startTest.log(LogStatus.FAIL, "Test completion ", result.getThrowable() + startTest.addScreenCapture(takeScreenShot()));
-			startTest.log(LogStatus.FAIL, "Test Completion",result.getThrowable() +  startTest.addScreenCapture(getscreen()))
-			
-		}*/
+		}
+	}
 		
 		@AfterMethod()
 		public void tearDown() throws IOException {

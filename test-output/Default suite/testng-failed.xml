@@ -10,6 +10,7 @@
           <include name="launchApplication"/>
           <include name="beforeSuite"/>
           <include name="tearDown"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.techaviator.demo.ScenarioComponents.RediffUserLogin -->
     </classes>

@@ -18,19 +18,19 @@ public class RediffUserLogin extends RediffBaseClass {
 	//Declare instance variables
 	RediffLoginPage loginWebElement;
 	RediffGenericAction act;
-	Logger log;
+//	Logger log;
 	@BeforeMethod
 	public void beforeMethod(){
 		
 		//Initialize instance variables
-		loginWebElement = new RediffLoginPage(driver);
-		act = new RediffGenericAction();
-		log = Logger.getLogger(RediffUserLogin.class);
+		
 	}
 
 	@Test(dataProvider = "RediffTestData", dataProviderClass = RediffDataProvider.class, enabled = true)
 	public void userLogin_Valid(Map<String, String> testData) throws IOException {
-		
+		loginWebElement = new RediffLoginPage(driver);
+		act = new RediffGenericAction();
+		log = Logger.getLogger(RediffUserLogin.class);
 		log.info("Test execution started...");
 		
 		//Enter User ID, Password and Submit
@@ -45,16 +45,16 @@ public class RediffUserLogin extends RediffBaseClass {
 		String actual = act.getText(loginWebElement.strText_ClassName_LoginName);
 		
 		//containsFullImageValidation(actual, exp, "Login to application");
-		//equalsFullImageValidation(actual, exp, "Login to application");
+		equalsFullImageValidation(actual, exp, "Login to application");
 		
-		if(actual.equalsIgnoreCase(exp)) {
-			System.out.println("Valid Login Pass  "+ "Actual: "+ actual + "Expected: "+ testData.get("ExpectedResult"));
-			log.info("Login with valid credentials pass");
-		} else {
-			System.out.println("Valid Login Failed  "+ "Actual: "+ actual + "Expected: "+ testData.get("ExpectedResult"));
-			log.info("Login with invalid credentials failed");
-		}
-		log.info("Test execution completed...");
+//		if(actual.equalsIgnoreCase(exp)) {
+//			System.out.println("Valid Login Pass  "+ "Actual: "+ actual + "Expected: "+ testData.get("ExpectedResult"));
+//			log.info("Login with valid credentials pass");
+//		} else {
+//			System.out.println("Valid Login Failed  "+ "Actual: "+ actual + "Expected: "+ testData.get("ExpectedResult"));
+//			log.info("Login with invalid credentials failed");
+//		}
+//		log.info("Test execution completed...");
 	}
 
 	@Test(dataProvider = "RediffTestData", dataProviderClass = RediffDataProvider.class, enabled = false)
