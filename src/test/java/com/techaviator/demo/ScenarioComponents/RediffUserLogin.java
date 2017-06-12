@@ -28,10 +28,13 @@ public class RediffUserLogin extends RediffBaseClass {
 
 	@Test(dataProvider = "RediffTestData", dataProviderClass = RediffDataProvider.class, enabled = true)
 	public void userLogin_Valid(Map<String, String> testData) throws IOException {
+		
 		loginWebElement = new RediffLoginPage(driver);
 		act = new RediffGenericAction();
+		
 		log = Logger.getLogger(RediffUserLogin.class);
-		log.info("Test execution started...");
+		eReport.startTest(testData.get("TC_ID")+"_"+testData.get("TC_Order"));
+		log.info("Valid Test execution started...");
 		
 		//Enter User ID, Password and Submit
 		act.clickLink(loginWebElement.webLnk_LinkText_SignIn);
@@ -60,7 +63,12 @@ public class RediffUserLogin extends RediffBaseClass {
 	@Test(dataProvider = "RediffTestData", dataProviderClass = RediffDataProvider.class, enabled = false)
 	public void userLogin_inValid(Map<String, String> testData) throws InterruptedException, IOException {
 
-		log.info("Test execution started...");
+		loginWebElement = new RediffLoginPage(driver);
+		act = new RediffGenericAction();
+		
+		log = Logger.getLogger(RediffUserLogin.class);
+		eReport.startTest(testData.get("TC_ID")+"_"+testData.get("TC_Order"));
+		log.info("Invalid Test execution started...");
 		
 		//Enter User ID, Password and Submit
 		act.clickLink(loginWebElement.webLnk_LinkText_SignIn);

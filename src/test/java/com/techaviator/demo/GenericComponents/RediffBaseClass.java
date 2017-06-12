@@ -30,7 +30,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class RediffBaseClass {
 
-	//Declare driver instance variable
+	//Declare instance variables
 	public WebDriver driver;
 	public Logger log;
 	public static ExtentReports eReport;
@@ -80,7 +80,7 @@ public class RediffBaseClass {
 		File screenShot = sc.getScreenshotAs(OutputType.FILE);
 		
 		//3. Save Path to Variable
-		String scFilePath = System.getProperty("user.dir")+"//src//test//reports"+ ".png";
+		String scFilePath = System.getProperty("user.dir")+"/test/reports"+ ".png";
 		
 		//4. Copy file with TCID and Date
 		FileUtils.copyFile(screenShot, new File(scFilePath+getDateTime()));
@@ -117,7 +117,7 @@ public class RediffBaseClass {
 		ImageIO.write(subImg, "png", outputFileSC);
 		
 		//9. Save path to variable
-		String path=System.getProperty("user.dir")+"//src//test//reports" + getDateTime() + ".png";
+		String path=System.getProperty("user.dir")+"/test/reports" + getDateTime() + ".png";
 		
 		//10. Copy file type with with TCID, Date
 		FileUtils.copyFile(outputFileSC, new File(path));
@@ -186,14 +186,9 @@ public class RediffBaseClass {
 			
 			startTest.log(LogStatus.FAIL, "Test completion ", result.getThrowable() + startTest.addScreenCapture(takeScreenShot()));
 		}
-	}
 		
-		@AfterMethod()
-		public void tearDown() throws IOException {
-
 		eReport.endTest(startTest);
 		eReport.flush();
 		driver.quit();
 	}
-
 }
